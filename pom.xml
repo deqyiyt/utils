@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- <parent>
+        <groupId>ias.framework.common</groupId>
+    		<artifactId>ias-common-parent</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+    </parent> -->
+    <groupId>ias.framework.common</groupId>
+    <artifactId>ias-common-utils</artifactId>
+    <version>1.1.0-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+    
+    
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.version>4.3.13.RELEASE</spring.version>
+        <junit.version>4.12</junit.version>
+        <dozer.version>5.5.1</dozer.version>
+        <pinyin4j.version>2.5.1</pinyin4j.version>
+        <httpclient.version>4.5.3</httpclient.version>
+        <jackson.version>2.8.10</jackson.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-lang.version>2.5</commons-lang.version>
+        <guava.version>23.0</guava.version>
+        <base64.version>2.3.9</base64.version>
+        <xstream.version>1.4.8</xstream.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <groovy.version>2.4.9</groovy.version>
+        <poi.version>3.9</poi.version>
+        <jsoup.version>1.9.2</jsoup.version>
+        <servlet-api.version>3.1.0</servlet-api.version>
+        <jxls.version>1.0.6</jxls.version>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--可选依赖-->
+        
+        <!-- 对象深层次拷贝 -->
+        <dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>${dozer.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<!-- 中文转换 -->
+		<dependency>
+			<groupId>com.belerweb</groupId>
+			<artifactId>pinyin4j</artifactId>
+			<version>${pinyin4j.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<!-- http调用 -->
+		<dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- spring -->
+        <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+		
+		<!-- json序列化 -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<!-- 工具类 -->
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>${guava.version}</version>
+		    <scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<!-- Base64 -->
+		<dependency>
+	  		<groupId>net.iharder</groupId>
+	  		<artifactId>base64</artifactId>
+	  		<version>${base64.version}</version>
+	  		<scope>compile</scope>
+            <optional>true</optional>
+	  	</dependency>
+	  	<dependency>
+		    <groupId>com.thoughtworks.xstream</groupId>
+		    <artifactId>xstream</artifactId>
+		    <version>${xstream.version}</version>
+		    <scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>${dom4j.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.groovy</groupId>
+		    <artifactId>groovy-all</artifactId>
+		    <version>${groovy.version}</version>
+		    <scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<!-- 文件操作 -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<!-- excel操作 -->
+		<dependency>  
+            <groupId>net.sf.jxls</groupId>  
+            <artifactId>jxls-core</artifactId>  
+            <version>${jxls.version}</version>  
+            <scope>compile</scope>  
+            <optional>true</optional>
+        </dependency>
+		<!-- html处理 -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${jsoup.version}</version>
+			<scope>compile</scope>
+            <optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- 发布源码 -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>  
+                <configuration>  
+                    <attach>true</attach>  
+                </configuration>  
+                <executions>  
+                    <execution>
+                        <id>source-jar</id>
+                        <phase>compile</phase>  
+                        <goals>  
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        
+        <pluginManagement>
+			<plugins>
+			    <plugin>
+			        <groupId>org.apache.maven.plugins</groupId>
+			        <artifactId>maven-surefire-plugin</artifactId>
+			        <configuration>
+			            <argLine>-Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m
+			                -Dfile.encoding=UTF-8
+			            </argLine>
+			            <forkMode>always</forkMode>
+			            <useFile>false</useFile>
+			            <includes>
+			                <include>**/*Tests.java</include>
+			            </includes>
+			            <excludes>
+			                <exclude>**/Abstract*.java</exclude>
+			            </excludes>
+			            <junitArtifactName>junit:junit</junitArtifactName>
+			        </configuration>
+			    </plugin>
+			</plugins>
+		</pluginManagement>
+    </build>
+</project>
